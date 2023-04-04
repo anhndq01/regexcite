@@ -31,7 +31,7 @@ You can install the development version of regexcite from [GitHub](https://githu
       
 ``` r
 # install.packages("devtools")
-devtools::install_github("jennybc/regexcite")
+devtools::install_github("anhndq01/regexcite")
 ```
 
 ## Usage
@@ -67,3 +67,11 @@ str_split_one(x, pattern = ",", n = 2)
 y <- "192.168.0.1"
 str_split_one(y, pattern = stringr::fixed("."))
 ```
+Another function in the package is `regexcite::my_add()`, which takes two input values and return their sum. If the second value is not provided, the function will use the default value of 10.
+```{r}
+library(regexcite)
+
+my_add(1, 2)
+```
+Please input numeric values. If the inputs contain a string value, the function will output an error message.
+This function also utilizes `assertthat::is.string()` to check if your input values contain a string value.
